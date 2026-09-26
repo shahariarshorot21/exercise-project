@@ -21,7 +21,7 @@ const EsxProvider = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/exdata.json")
+    fetch("https://api.api-store.workers.dev/api/fitlog")
       .then((res) => res.json())
       .then((data) => {
         setWorkouts(data);
